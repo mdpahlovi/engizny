@@ -13,10 +13,10 @@ export default function Navbar() {
     );
 
     return (
-        <MTNavbar fullWidth shadow className="sticky top-0 z-10">
+        <MTNavbar fullWidth shadow={false} className="sticky top-0 z-10">
             <section className="flex items-center justify-between">
                 <Link href="/">
-                    <Image src="/logo.png" alt="logo" width={140} height={100} />
+                    <Image src="/logo.png" alt="logo" width={120} height={100} />
                 </Link>
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{NavList}</div>
