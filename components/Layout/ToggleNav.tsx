@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { IconButton } from "../Common/MTComponent";
 import { CgClose, CgMenuRight } from "react-icons/cg";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { toggleClose, toggleOpen } from "@/redux/features/navbar/toggleNavSlice";
@@ -18,13 +17,9 @@ export function ToggleButton() {
     return (
         <>
             {open ? (
-                <IconButton ripple={false} onClick={() => dispatch(toggleClose())} className="lg:hidden">
-                    <CgClose size={20} />
-                </IconButton>
+                <CgClose size={20} onClick={() => dispatch(toggleClose())} className="lg:hidden" />
             ) : (
-                <IconButton ripple={false} onClick={() => dispatch(toggleOpen())} className="lg:hidden">
-                    <CgMenuRight size={20} />
-                </IconButton>
+                <CgMenuRight size={20} onClick={() => dispatch(toggleOpen())} className="lg:hidden" />
             )}
         </>
     );
