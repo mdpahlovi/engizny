@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Carousel } from "../Common/MTComponent";
+import { GlassMagnifier } from "react-image-magnifiers";
 
 export default function ProductCarousel({ images }: { images: string[] }) {
     return (
@@ -22,7 +23,7 @@ export default function ProductCarousel({ images }: { images: string[] }) {
             )}
         >
             {images.map((image, idx) => (
-                <Image key={idx} src={image} alt="" className="h-full w-full object-cover" width={500} height={500} />
+                <GlassMagnifier key={idx} imageSrc={image} imageAlt="" magnifierSize="480px" magnifierBorderSize={1} />
             ))}
         </Carousel>
     );
