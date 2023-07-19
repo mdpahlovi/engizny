@@ -15,6 +15,7 @@ export interface IReview {
 }
 
 export interface IProductData {
+    id: number;
     product: IProduct;
     reviews: IReview[];
 }

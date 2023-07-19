@@ -17,6 +17,9 @@
     section {
         @apply container mx-auto px-6;
     }
+    h3 {
+        @apply text-xl lg:text-2xl font-semibold font-serif;
+    }
     h4 {
         @apply text-lg font-semibold font-serif;
     }

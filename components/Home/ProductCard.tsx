@@ -2,8 +2,9 @@ import Image from "next/image";
 import { IProduct } from "@/types";
 import { Card, CardHeader, CardBody, CardFooter, Button, IconButton } from "../Common/MTComponent";
 import { HeartIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
-export default function ProductCard({ product }: { product: IProduct }) {
+export default function ProductCard({ id, product }: { id: number; product: IProduct }) {
     const { images, name, price, description } = product;
 
     return (
@@ -24,9 +25,11 @@ export default function ProductCard({ product }: { product: IProduct }) {
                         <HeartIcon className="w-5 h-5" />
                     </IconButton>
                 </div>
-                <Button size="sm" color="gray" fullWidth={true}>
-                    Add to Cart
-                </Button>
+                <Link href={`/product/${id}`} className="w-full">
+                    <Button size="sm" color="gray" fullWidth>
+                        See Details
+                    </Button>
+                </Link>
             </CardFooter>
         </Card>
     );

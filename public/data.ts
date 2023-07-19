@@ -2,6 +2,7 @@ export const categories = ["Men", "Women", "Baby"];
 
 export const products = [
     {
+        id: 1,
         product: {
             name: "Half Sleeves T-shirts",
             description:
@@ -31,6 +32,7 @@ export const products = [
         ],
     },
     {
+        id: 2,
         product: {
             name: "Ladies Multicolored Dress",
             description: "This classy shirt for women gives you a gorgeous look on everyday wear and specially for semi-casual wears.",
@@ -60,6 +62,7 @@ export const products = [
         ],
     },
     {
+        id: 3,
         product: {
             name: "Sneaker Shoes",
             description: "Synthetic Leather Casual Sneaker shoes for Women/girls Sneakers For Women",
@@ -88,6 +91,7 @@ export const products = [
         ],
     },
     {
+        id: 4,
         product: {
             name: "Handbag For Girls",
             description: "This fashion is designed to add a charming effect to your casual outfit. This Bag is made of synthetic leather.",
@@ -117,6 +121,7 @@ export const products = [
         ],
     },
     {
+        id: 5,
         product: {
             name: "Baby Romper",
             description: "An adorable romper for babies.",
@@ -145,6 +150,7 @@ export const products = [
         ],
     },
     {
+        id: 6,
         product: {
             name: "Stylish Casual Jeans Shoes",
             description: "High Quality ,Stylish design ,Comfortable wear ,FAshion ,Durable",
@@ -173,6 +179,7 @@ export const products = [
         ],
     },
     {
+        id: 7,
         product: {
             name: "Women Sweaters Wool",
             description:
@@ -203,6 +210,7 @@ export const products = [
         ],
     },
     {
+        id: 8,
         product: {
             name: "Round Silver Frame Sun Glasses",
             description:
@@ -233,6 +241,7 @@ export const products = [
         ],
     },
     {
+        id: 9,
         product: {
             name: "Baby Shoes",
             description: "Cute and comfortable shoes for babies.",
@@ -261,6 +270,7 @@ export const products = [
         ],
     },
     {
+        id: 10,
         product: {
             name: "Waterproof Leather Brand Watch",
             description: "Watch Crown With Environmental IPS Bronze Electroplating; Display system of 12 hours",
@@ -288,6 +298,7 @@ export const products = [
         ],
     },
     {
+        id: 11,
         product: {
             name: "Women Winter Clothes",
             description:
@@ -316,6 +327,7 @@ export const products = [
         ],
     },
     {
+        id: 12,
         product: {
             name: "Spring and Summer Shoes",
             description: "Comfortable stretch cloth, lightweight body; ,rubber sole, anti-skid wear;",
@@ -345,6 +357,7 @@ export const products = [
         ],
     },
     {
+        id: 13,
         product: {
             name: "Baby Blanket",
             description: "A soft and cozy blanket for babies.",

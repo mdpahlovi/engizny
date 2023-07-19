@@ -16,6 +16,7 @@ import {
     CardHeader,
     CardBody,
     CardFooter,
+    Carousel,
 } from "@material-tailwind/react";
 
 export {
@@ -34,4 +35,5 @@ export {
     CardHeader,
     CardBody,
     CardFooter,
+    Carousel,
 };
