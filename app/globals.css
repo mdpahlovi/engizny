@@ -4,7 +4,7 @@
 
 @layer base {
     :root {
-        --primary: 91 114 242;
+        --primary: 243 143 29;
         --secondary: 255 127 4;
         --accent: 254 54 151;
         --content: 0 0 0;
@@ -16,6 +16,12 @@
     }
     section {
         @apply container mx-auto px-6;
+    }
+    h4 {
+        @apply text-lg font-semibold font-serif;
+    }
+    h6 {
+        @apply text-sm;
     }
 
     /* Scrollbar Styling */

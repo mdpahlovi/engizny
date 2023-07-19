@@ -52,7 +52,7 @@ export default function Main({ children }: { children: React.ReactNode }) {
                 variants: {
                     filled: {
                         blue: { backgroud: "bg-primary", hover: "hover:shadow-md hover:shadow-primary/30", shadow: "" },
-                        orange: { backgroud: "bg-secondary", hover: "hover:shadow-md hover:shadow-secondary/30", shadow: "" },
+                        gray: { active: "", backgroud: "bg-content/20", color: "", focus: "", hover: "", shadow: "" },
                     },
                     outlined: {
                         blue: {
@@ -63,6 +63,23 @@ export default function Main({ children }: { children: React.ReactNode }) {
                         },
                     },
                 },
+            },
+        },
+        iconButton: {
+            styles: {
+                base: { initial: { textTransform: "", fontWeight: "" } },
+                sizes: {
+                    sm: { fontSize: "", borderRadius: "rounded-full" },
+                    md: { fontSize: "", borderRadius: "rounded-full" },
+                    lg: { fontSize: "", borderRadius: "rounded-full" },
+                },
+                variants: { filled: { blue: { backgroud: "bg-primary", hover: "hover:shadow-md hover:shadow-primary/30", shadow: "" } } },
+            },
+        },
+        card: {
+            styles: {
+                base: { shadow: { boxShadow: "border shadow-lg" } },
+                variants: { filled: { white: { backgroud: "bg-background", color: "text-content" } } },
             },
         },
     };

@@ -1,11 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button, MTNavbar, Popover, PopoverHandler, PopoverContent } from "../Common/MTComponent";
+import { Button, MTNavbar } from "../Common/MTComponent";
 import { NavCollapse, ToggleButton } from "./ToggleNav";
-import { MdShoppingCart } from "react-icons/md";
-import { HiOutlineSearch } from "react-icons/hi";
-import { HiClipboardDocumentList } from "react-icons/hi2";
+import { ClipboardDocumentListIcon, ShoppingCartIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
     const NavList = (
@@ -38,10 +36,10 @@ export default function Navbar() {
                         <div className="mr-4 hidden lg:block">{NavList}</div>
                         <div className="hidden lg:block relative">
                             <input placeholder="Search" className="border rounded-full py-2.5 px-5 text-sm" />
-                            <HiOutlineSearch size={20} className="absolute top-2.5 right-5" />
+                            <MagnifyingGlassIcon className="w-5 h-5 absolute top-2.5 right-5" />
                         </div>
-                        <HiClipboardDocumentList size={20} />
-                        <MdShoppingCart size={20} />
+                        <ClipboardDocumentListIcon className="w-5 h-5" />
+                        <ShoppingCartIcon className="w-5 h-5" />
                         <Link href="/login" className="hidden lg:block">
                             <Button size="sm">Login / Signup</Button>
                         </Link>
@@ -51,7 +49,7 @@ export default function Navbar() {
                 <NavCollapse>
                     <div className="w-max relative mt-4">
                         <input placeholder="Search" className="border rounded-full py-2.5 px-5 text-sm" />
-                        <HiOutlineSearch size={20} className="absolute top-2.5 right-5" />
+                        <MagnifyingGlassIcon className="w-5 h-5 absolute top-2.5 right-5" />
                     </div>
                     {NavList}
                     <Link href="/login" className="block mb-2">

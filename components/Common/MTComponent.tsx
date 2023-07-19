@@ -7,12 +7,15 @@ import {
     Typography,
     Button,
     IconButton,
-    Card,
     Collapse,
     Input,
     Popover,
     PopoverHandler,
     PopoverContent,
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
 } from "@material-tailwind/react";
 
 export {
@@ -22,10 +25,13 @@ export {
     Typography,
     Button,
     IconButton,
-    Card,
     Collapse,
     Input,
     Popover,
     PopoverHandler,
     PopoverContent,
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
 };

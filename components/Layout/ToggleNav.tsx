@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { CgClose, CgMenuRight } from "react-icons/cg";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { toggleClose, toggleOpen } from "@/redux/features/navbar/toggleNavSlice";
 import { Collapse } from "../Common/MTComponent";
 
@@ -17,9 +17,9 @@ export function ToggleButton() {
     return (
         <>
             {open ? (
-                <CgClose size={20} onClick={() => dispatch(toggleClose())} className="lg:hidden" />
+                <XMarkIcon onClick={() => dispatch(toggleClose())} className="w-5 h-5 lg:hidden" />
             ) : (
-                <CgMenuRight size={20} onClick={() => dispatch(toggleOpen())} className="lg:hidden" />
+                <Bars3Icon onClick={() => dispatch(toggleOpen())} className="w-5 h-5 lg:hidden" />
             )}
         </>
     );
