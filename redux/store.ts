@@ -2,10 +2,14 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import navToggleReducer from "./features/navbar/toggleNavSlice";
+import cardReducer from "./features/card/cardSlice";
+import wishlistReducer from "./features/wishlist/wishlistSlice";
 
 export const store = configureStore({
     reducer: {
         toggleNav: navToggleReducer,
+        card: cardReducer,
+        wishlist: wishlistReducer,
     },
 });
 

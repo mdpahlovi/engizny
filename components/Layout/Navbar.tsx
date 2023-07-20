@@ -38,12 +38,10 @@ export default function Navbar() {
                             <input placeholder="Search" className="border rounded-full py-2.5 px-5 text-sm" />
                             <MagnifyingGlassIcon className="w-5 h-5 absolute top-2.5 right-5" />
                         </div>
-                        <ClipboardDocumentListIcon className="w-5 h-5" />
-                        <ShoppingCartIcon className="w-5 h-5" />
+                        <ToggleButton />
                         <Link href="/login" className="hidden lg:block">
                             <Button size="sm">Login / Signup</Button>
                         </Link>
-                        <ToggleButton />
                     </div>
                 </section>
                 <NavCollapse>

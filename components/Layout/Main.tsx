@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import AllDrawers from "./Drawer";
 import ReduxProvider from "../Common/ReduxProvider";
 import { ThemeProvider } from "../Common/MTComponent";
 
@@ -90,6 +91,7 @@ export default function Main({ children }: { children: React.ReactNode }) {
                 <Navbar />
                 {children}
                 <Footer />
+                <AllDrawers />
             </ThemeProvider>
         </ReduxProvider>
     );

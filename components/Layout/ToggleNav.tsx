@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { toggleClose, toggleOpen } from "@/redux/features/navbar/toggleNavSlice";
 import { Collapse } from "../Common/MTComponent";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { toggleCardDrawer, toggleClose, toggleOpen, toggleWishlistDrawer } from "@/redux/features/navbar/toggleNavSlice";
+import { Bars3Icon, XMarkIcon, ClipboardDocumentListIcon, ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 export function ToggleButton() {
     const dispatch = useAppDispatch();
@@ -16,10 +16,12 @@ export function ToggleButton() {
 
     return (
         <>
+            <ClipboardDocumentListIcon className="w-5 h-5 cursor-pointer" onClick={() => dispatch(toggleWishlistDrawer())} />
+            <ShoppingCartIcon className="w-5 h-5 cursor-pointer" onClick={() => dispatch(toggleCardDrawer())} />
             {open ? (
-                <XMarkIcon onClick={() => dispatch(toggleClose())} className="w-5 h-5 lg:hidden" />
+                <XMarkIcon onClick={() => dispatch(toggleClose())} className="w-5 h-5 cursor-pointer lg:hidden" />
             ) : (
-                <Bars3Icon onClick={() => dispatch(toggleOpen())} className="w-5 h-5 lg:hidden" />
+                <Bars3Icon onClick={() => dispatch(toggleOpen())} className="w-5 h-5 cursor-pointer lg:hidden" />
             )}
         </>
     );

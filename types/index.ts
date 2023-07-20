@@ -19,3 +19,10 @@ export interface IProductData {
     product: IProduct;
     reviews: IReview[];
 }
+
+export interface CardState {
+    product: number;
+    quantity: number;
+    size: string;
+    color: string;
+}
