@@ -1,6 +1,6 @@
 "use client";
 
-import { CardState } from "@/types";
+import { CardPayload, CardState } from "@/types";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 interface IProductCard {
@@ -15,7 +15,7 @@ export const cardSlice = createSlice({
     name: "card",
     initialState,
     reducers: {
-        addToCard: (state, action: PayloadAction<CardState>) => {
+        addToCard: (state, action: PayloadAction<CardPayload>) => {
             const isExist = state.cards.find((product) => product.product === action.payload.product);
             if (isExist) {
                 isExist.quantity = isExist.quantity! + 1;

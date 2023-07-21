@@ -18,6 +18,7 @@ import {
     CardFooter,
     Carousel,
     Drawer,
+    Badge,
 } from "@material-tailwind/react";
 
 export {
@@ -38,4 +39,5 @@ export {
     CardFooter,
     Carousel,
     Drawer,
+    Badge,
 };

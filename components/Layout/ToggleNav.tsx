@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { Collapse } from "../Common/MTComponent";
+import { Collapse, Badge } from "../Common/MTComponent";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { toggleCardDrawer, toggleClose, toggleOpen, toggleWishlistDrawer } from "@/redux/features/navbar/toggleNavSlice";
 import { Bars3Icon, XMarkIcon, ClipboardDocumentListIcon, ShoppingCartIcon } from "@heroicons/react/24/solid";
@@ -9,6 +9,8 @@ import { Bars3Icon, XMarkIcon, ClipboardDocumentListIcon, ShoppingCartIcon } fro
 export function ToggleButton() {
     const dispatch = useAppDispatch();
     const { open } = useAppSelector((state) => state.toggleNav);
+    const { wishlist } = useAppSelector((state) => state.wishlist);
+    const { cards } = useAppSelector((state) => state.card);
 
     useEffect(() => {
         window.addEventListener("resize", () => window.innerWidth >= 960 && dispatch(toggleClose()));
@@ -16,8 +18,12 @@ export function ToggleButton() {
 
     return (
         <>
-            <ClipboardDocumentListIcon className="w-5 h-5 cursor-pointer" onClick={() => dispatch(toggleWishlistDrawer())} />
-            <ShoppingCartIcon className="w-5 h-5 cursor-pointer" onClick={() => dispatch(toggleCardDrawer())} />
+            <Badge invisible={wishlist.length === 0} content={wishlist.length}>
+                <ClipboardDocumentListIcon className="w-5 h-5 cursor-pointer" onClick={() => dispatch(toggleWishlistDrawer())} />
+            </Badge>
+            <Badge invisible={cards.length === 0} content={cards.length}>
+                <ShoppingCartIcon className="w-5 h-5 cursor-pointer" onClick={() => dispatch(toggleCardDrawer())} />
+            </Badge>
             {open ? (
                 <XMarkIcon onClick={() => dispatch(toggleClose())} className="w-5 h-5 cursor-pointer lg:hidden" />
             ) : (

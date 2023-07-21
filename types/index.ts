@@ -26,3 +26,8 @@ export interface CardState {
     size: string;
     color: string;
 }
+export interface CardPayload {
+    product: number;
+    size: string;
+    color: string;
+}

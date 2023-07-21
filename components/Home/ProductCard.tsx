@@ -1,8 +1,8 @@
+import Link from "next/link";
 import Image from "next/image";
 import { IProduct } from "@/types";
-import { Card, CardHeader, CardBody, CardFooter, Button, IconButton } from "../Common/MTComponent";
-import { HeartIcon } from "@heroicons/react/24/solid";
-import Link from "next/link";
+import { Card, CardHeader, CardBody, CardFooter, Button } from "../Common/MTComponent";
+import AddToWishlist from "../Common/AddToWishlist";
 
 export default function ProductCard({ id, product }: { id: number; product: IProduct }) {
     const { images, name, price, description } = product;
@@ -20,11 +20,7 @@ export default function ProductCard({ id, product }: { id: number; product: IPro
                 <h6 className="text-content/80">{description}</h6>
             </CardBody>
             <CardFooter className="pt-0 flex items-center gap-4">
-                <div>
-                    <IconButton>
-                        <HeartIcon className="w-5 h-5" />
-                    </IconButton>
-                </div>
+                <AddToWishlist id={id} />
                 <Link href={`/product/${id}`} className="w-full">
                     <Button size="sm" color="gray" fullWidth>
                         See Details

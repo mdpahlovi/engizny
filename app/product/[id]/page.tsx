@@ -1,14 +1,11 @@
-import { products } from "@/public/data";
 import { IProductData } from "@/types";
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
-import { Button, IconButton } from "@/components/Common/MTComponent";
-import getSize from "@/helpers/getSize";
-import getColor from "@/helpers/getColor";
-import { HeartIcon } from "@heroicons/react/24/solid";
+import { products } from "@/public/data";
+import { Button } from "@/components/Common/MTComponent";
 import ProductCarousel from "@/components/Product/ProductCarousel";
-import Section from "@/components/Product/Section";
+import Section from "@/components/Product/SetProductDetails/Section";
+import SetProductDetails from "@/components/Product/SetProductDetails";
 
-export default function ProductDetails({ params }: { params: Params }) {
+export default function ProductDetails({ params }: { params: { id: string } }) {
     const productData: IProductData | undefined = products.find((product) => product.id === Number(params.id));
 
     if (productData === undefined) {
@@ -37,28 +34,7 @@ export default function ProductDetails({ params }: { params: Params }) {
                             </Button>
                         ))}
                     </Section>
-                    <Section title="Size">
-                        {sizes.map((size, idx) => (
-                            <IconButton key={idx}>{getSize(size)}</IconButton>
-                        ))}
-                    </Section>
-                    <Section title="Colors">
-                        {colors.map((color, idx) => (
-                            <IconButton key={idx}>
-                                <div className={`w-4 h-4 ${getColor(color)}`} />
-                            </IconButton>
-                        ))}
-                    </Section>
-                    <div className="flex gap-4 pt-2">
-                        <Button size="sm" color="gray">
-                            Add To Card
-                        </Button>
-                        <div>
-                            <IconButton>
-                                <HeartIcon className="w-5 h-5" />
-                            </IconButton>
-                        </div>
-                    </div>
+                    <SetProductDetails id={id} sizes={sizes} colors={colors} />
                 </div>
             </section>
         );

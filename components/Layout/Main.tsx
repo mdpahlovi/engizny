@@ -74,13 +74,26 @@ export default function Main({ children }: { children: React.ReactNode }) {
                     md: { fontSize: "", borderRadius: "rounded-full" },
                     lg: { fontSize: "", borderRadius: "rounded-full" },
                 },
-                variants: { filled: { blue: { backgroud: "bg-primary", hover: "hover:shadow-md hover:shadow-primary/30", shadow: "" } } },
+                variants: {
+                    filled: { blue: { backgroud: "bg-primary", hover: "hover:shadow-md hover:shadow-primary/30", shadow: "" } },
+                    outlined: { blue: { border: "border border-primary", color: "text-primary", focus: "" } },
+                },
             },
         },
         card: {
             styles: {
                 base: { shadow: { boxShadow: "border shadow-lg" } },
                 variants: { filled: { white: { backgroud: "bg-background", color: "text-content" } } },
+            },
+        },
+        badge: {
+            styles: {
+                base: {
+                    badge: {
+                        initial: { fontSize: "text-[10px]", fontWeight: "", paddingX: "px-0.5", paddingY: "py-0.5" },
+                        withContent: { minHeight: "min-h-[14px]", minWidth: "min-w-[14px]" },
+                    },
+                },
             },
         },
     };
