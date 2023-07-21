@@ -22,7 +22,6 @@ export const cardSlice = createSlice({
             } else {
                 state.cards.push({ ...action.payload, quantity: 1 });
             }
-            localStorage.setItem("card", JSON.stringify(state.cards));
         },
         removeOne: (state, action: PayloadAction<number>) => {
             const isExist = state.cards.find((product) => product.product === action.payload);
@@ -31,11 +30,9 @@ export const cardSlice = createSlice({
             } else {
                 state.cards = state.cards.filter((product) => product.product !== action.payload);
             }
-            localStorage.setItem("card", JSON.stringify(state.cards));
         },
         removeFromCard: (state, action: PayloadAction<number>) => {
             state.cards = state.cards.filter((product) => product.product !== action.payload);
-            localStorage.setItem("card", JSON.stringify(state.cards));
         },
     },
 });

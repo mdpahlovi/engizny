@@ -15,7 +15,7 @@ export default function AllDrawers() {
             <Drawer placement="right" size={448} open={wishlistDrawer} onClose={() => dispatch(toggleWishlistDrawer())}>
                 <WishlistDrawer />
             </Drawer>
-            <Drawer placement="right" size={448} open={cardDrawer} onClose={() => dispatch(toggleCardDrawer())}>
+            <Drawer placement="right" size={640} open={cardDrawer} onClose={() => dispatch(toggleCardDrawer())}>
                 <CardDrawer />
             </Drawer>
         </>
