@@ -1,17 +1,17 @@
 "use client";
 
+import { rootReducer } from "./rootReducer";
+import storage from "redux-persist/lib/storage";
 import { configureStore } from "@reduxjs/toolkit";
-import navToggleReducer from "./features/navbar/toggleNavSlice";
-import cardReducer from "./features/card/cardSlice";
-import wishlistReducer from "./features/wishlist/wishlistSlice";
+import { persistStore, persistReducer } from "redux-persist";
 
-export const store = configureStore({
-    reducer: {
-        toggleNav: navToggleReducer,
-        card: cardReducer,
-        wishlist: wishlistReducer,
-    },
-});
+const persistConfig = { key: "root", storage };
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export const store = configureStore({ reducer: persistedReducer });
+
+export const persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
